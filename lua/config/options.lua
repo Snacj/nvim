@@ -13,8 +13,9 @@ vim.opt.smartindent = true
 vim.opt.guicursor = "n-v-c-i:block"
 vim.opt.background = "dark"
 vim.opt.termguicolors = true
-vim.cmd([[colorscheme gruvbox]])
+--vim.cmd([[colorscheme gruvbox]])
 --vim.cmd("colorscheme koehler")
+vim.cmd([[colorscheme oldschool]])
 
 -- clipboard
 vim.opt.clipboard = unnamed

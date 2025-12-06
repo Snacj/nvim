@@ -1,3 +1,6 @@
 return {
-    "ellisonleao/gruvbox.nvim", priority = 1000,
+	"L-Colombo/oldschool.nvim",
+	config = true,
+	-- to ovverride palette colors:
+	-- opts = { <color> = "<hex value>"}
 }

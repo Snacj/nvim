@@ -5,9 +5,10 @@ return {
 		config = function()
 			require("lualine").setup({
 				options = {
-					theme = "gruvbox_dark",
+					--theme = "gruvbox_dark",
 					--theme = 'onedark',
 					--theme = "16color",
+					theme = "oldschool",
 				},
 			})
 		end,
