@@ -10,7 +10,7 @@ vim.opt.expandtab = true -- default true
 vim.opt.smartindent = true
 
 -- cursor and colors
-vim.opt.guicursor = "n-v-c-i:block"
+vim.opt.guicursor = "a:block"
 vim.opt.background = "dark"
 vim.opt.termguicolors = true
 --vim.cmd([[colorscheme gruvbox]])
