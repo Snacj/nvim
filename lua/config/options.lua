@@ -15,7 +15,7 @@ vim.opt.background = "dark"
 vim.opt.termguicolors = true
 --vim.cmd([[colorscheme gruvbox]])
 --vim.cmd("colorscheme koehler")
-vim.cmd([[colorscheme oldschool]])
+vim.cmd([[colorscheme gruber-darker]])
 
 -- clipboard
 vim.opt.clipboard = unnamed
