@@ -13,8 +13,6 @@ vim.opt.smartindent = true
 vim.opt.guicursor = "n-v-c-i:block"
 vim.opt.background = "dark"
 vim.opt.termguicolors = true
-vim.cmd([[colorscheme gruvbox]])
---vim.cmd("colorscheme koehler")
 
 -- clipboard
 vim.opt.clipboard = unnamed
@@ -43,17 +41,6 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 			vim.cmd([[%s/\s\+$//e]])
 		end)
 		vim.fn.setpos(".", save_cursor)
-	end,
-})
-
--- Use 2 spaces for JS/TS files
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
-	callback = function()
-		vim.bo.shiftwidth = 2
-		vim.bo.tabstop = 2
-		vim.bo.softtabstop = 2
-		vim.bo.expandtab = true
 	end,
 })
 
