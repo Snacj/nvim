@@ -1,14 +1,18 @@
 return {
-  -- Gruvbox
-  {
-    "ellisonleao/gruvbox.nvim",
-    priority = 1000,
-  },
+	-- Gruvbox
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+	},
 
-  -- Gruber Darker
-  {
-    "blazkowolf/gruber-darker.nvim",
-    priority = 1000,
-  },
+	-- Gruber Darker
+	{
+		"blazkowolf/gruber-darker.nvim",
+		priority = 1000,
+	},
+	-- Monokai (pro)
+	{
+		"tanvirtin/monokai.nvim",
+		priority = 1000,
+	},
 }
-

@@ -23,31 +23,37 @@ local function write_theme(name)
 end
 
 function M.load(name, opts)
-	opts = opts or {}
+    opts = opts or {}
 
-	local theme = require("ui.themes." .. name)
-	if not theme or not theme.colorscheme then
-		vim.notify("Invalid theme: " .. name, vim.log.levels.ERROR)
-		return
-	end
+    local theme = require("ui.themes." .. name)
+    if not theme or not theme.colorscheme then
+        vim.notify("Invalid theme: " .. name, vim.log.levels.ERROR)
+        return
+    end
 
-	local ok = pcall(vim.cmd, "colorscheme " .. theme.colorscheme)
-	if not ok then
-		vim.notify("Failed to load colorscheme: " .. theme.colorscheme, vim.log.levels.ERROR)
-		return
-	end
+    -- run any theme-specific setup (e.g. monokai palette)
+    if theme.setup then
+        theme.setup()
+    end
+
+    local ok = pcall(vim.cmd, "colorscheme " .. theme.colorscheme)
+    if not ok then
+        vim.notify("Failed to load colorscheme: " .. theme.colorscheme, vim.log.levels.ERROR)
+        return
+    end
 
 	current = theme
 
-    if package.loaded["lualine"] and theme.lualine then
-        local lualine = require("lualine")
+	-- update lualine
+	if package.loaded["lualine"] and theme.lualine then
+		local lualine = require("lualine")
 
-        lualine.setup({
-            options = {
-                theme = theme.lualine,
-            },
-        })
-    end
+		lualine.setup({
+			options = {
+				theme = theme.lualine,
+			},
+		})
+	end
 
 	if not opts.no_persist then
 		write_theme(name)

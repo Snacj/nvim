@@ -14,6 +14,7 @@ end, {
 		return {
 			"gruvbox",
 			"gruber_darker",
+            "monokai",
 			"hard_contrast",
 		}
 	end,
