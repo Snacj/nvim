@@ -9,6 +9,15 @@ vim.opt.shiftwidth = 4 -- default 4
 vim.opt.expandtab = true -- default true
 vim.opt.smartindent = true
 
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact", "css" },
+    callback = function()
+        vim.opt_local.tabstop = 2
+        vim.opt_local.softtabstop = 2
+        vim.opt_local.shiftwidth = 2
+    end,
+})
+
 -- cursor and colors
 vim.opt.guicursor = "n-v-c-i:block"
 vim.opt.background = "dark"
