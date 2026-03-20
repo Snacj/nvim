@@ -15,4 +15,8 @@ return {
 		"tanvirtin/monokai.nvim",
 		priority = 1000,
 	},
+    -- Coal
+    {
+    'cranberry-clockworks/coal.nvim',
+    },
 }

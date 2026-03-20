@@ -16,6 +16,7 @@ end, {
 			"gruber_darker",
             "monokai",
 			"hard_contrast",
+            "coal",
 		}
 	end,
 })
