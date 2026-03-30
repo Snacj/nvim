@@ -17,6 +17,7 @@ end, {
             "monokai",
 			"hard_contrast",
             "coal",
+            "gruvbox_light",
 		}
 	end,
 })
