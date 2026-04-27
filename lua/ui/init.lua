@@ -7,17 +7,22 @@ if not theme.get() then
 end
 
 vim.api.nvim_create_user_command("Theme", function(opts)
-	theme.load(opts.args)
+	local name = vim.trim(opts.args)
+	theme.load(name)
 end, {
 	nargs = 1,
 	complete = function()
 		return {
 			"gruvbox",
+			"gruvbox_light",
+            "gruvbox_material",
 			"gruber_darker",
-            "monokai",
+			"monokai",
 			"hard_contrast",
-            "coal",
-            "gruvbox_light",
+			"coal",
+			"rose_pine",
+            "bluloco",
+            "dookie",
 		}
 	end,
 })

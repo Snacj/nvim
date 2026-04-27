@@ -39,6 +39,14 @@ local function apply_darkmode(is_dark)
 end
 
 function M.load(name, opts)
+    name = vim.trim(name or "")
+
+	local ok, theme = pcall(require, "ui.themes." .. name)
+	if not ok then
+		vim.notify("Theme not found: " .. name, vim.log.levels.ERROR)
+		return
+	end
+
 	opts = opts or {}
 
 	local theme = require("ui.themes." .. name)
