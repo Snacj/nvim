@@ -8,7 +8,6 @@ return {
     {
         "sainnhe/gruvbox-material",
         priority = 1000,
-        name = "gruvbox_material",
     },
 	-- Gruber Darker
 	{
