@@ -1,10 +1,9 @@
 return {
 	"mrcjkb/rustaceanvim",
-	version = "^8", -- Recommended
-	lazy = false, -- This plugin is already lazy
+	version = "^9", -- v9 requires Neovim >= 0.12 (v8 was for 0.11)
+	lazy = false,
 
 	init = function()
-		-- This MUST be in init (runs before plugin loads)
 		vim.g.rustaceanvim = {
 			dap = {
 				adapter = require("rustaceanvim.config").get_codelldb_adapter(
